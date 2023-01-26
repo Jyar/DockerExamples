@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t zo/docker-examples -f Dockerfile .
+  - docker build -t zo/docker-examples -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true zo/docker-examples npm run test
